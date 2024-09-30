@@ -116,3 +116,49 @@ class Customer:
     def make_payment(self):
         pass
 
+
+class Room:
+    """ Class represent a hotel room in the system"""
+
+    def __init__(self, room_number, room_type, rate_per_night, additional_features):
+        """Constructor will initialize a Room object."""
+        self._room_number = room_number
+        self._room_type = room_type
+        self._rate_per_night = rate_per_night
+        self._is_available = True
+        self._additional_features = additional_features
+
+    # Getters and Setters for private attributes
+    def get_room_number(self):
+        return self._room_number
+
+    def set_room_number(self, room_number):
+        self._room_number = room_number
+
+    def get_room_type(self):
+        return self._room_type
+
+    def set_room_type(self, room_type):
+        self._room_type = room_type
+
+    def get_rate_per_night(self):
+        return self._rate_per_night
+
+    def set_rate_per_night(self, rate_per_night):
+        self._rate_per_night = rate_per_night
+
+    def is_room_available(self):
+        return self._is_available
+
+    def set_room_availability(self, is_available):
+        self._is_available = is_available
+
+    def get_additional_features(self):
+        return self._additional_features
+
+    def set_additional_features(self, additional_features):
+        self._additional_features = additional_features
+
+    def check_availability(self):
+        pass
+
