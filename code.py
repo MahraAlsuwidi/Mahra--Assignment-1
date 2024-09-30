@@ -210,3 +210,35 @@ class Bill:
 
     def make_payment(self):
         pass
+
+
+# Creating a customer object
+customer = Customer(1,"Ted Vera","tedvera@mac.com","123-456-7890","Mastercard (ending in 9904)")
+
+# Creating a room object
+room = Room(101,"2 Queen Beds",89.95,"No Smoking, Desk, Safe, Coffee Maker, Hair Dryer")
+
+# Creating a reservation object
+reservation = Reservation(52523687,"Sun, Aug 22, 2010 - 03:00 PM","Tue, Aug 24, 2010 - 12:00 PM",room.get_room_number(),customer.get_name(),customer.get_email())
+
+# Creating a bill object
+bill = Bill(15549850358,reservation.get_reservation_id(),179.90,21.58)
+
+# Displaying reservation and billing details
+print("Your Reservation Is Confirmed")
+print("Thank you for your reservation. Please print your hotel receipt and sho it at check in.")
+print(f"Customer Name: {reservation.get_customer_name()}")
+print(f"Email: {reservation.get_email()}")
+print("Comfort Inn & Suites Los Alamos")
+print(f"Reservation ID: {reservation.get_reservation_id()}")
+print(f"Hotel Confirmation Number: {reservation.get_reservation_id()}")
+print(f"Check-In: {reservation.get_check_in_date()}")
+print(f"Check-Out: {reservation.get_check_out_date()}")
+print(f"Room Type: {room.get_room_type()} {room.get_additional_features()}")
+
+print("\nSummary of Charges")
+print(f"Room Cost (avg. per room, per night): ${room.get_rate_per_night()}")
+print(f"Number of Nights: 2")
+print(f"Room Subtotal: ${bill.get_total_amount()}")
+print(f"Taxes and Fees: ${bill.get_taxes()}")
+print(f"Total Charges: ${bill.get_total_amount() + bill.get_taxes()}")
