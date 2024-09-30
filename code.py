@@ -65,3 +65,54 @@ class Reservation:
 
     def modify_reservation(self):
         pass
+
+
+
+class Customer:
+    """ Class representing a customers in the system """
+
+    def __init__(self, customer_id, name, email, phone_number, payment_details):
+        """Constructor will initialize a Customer object."""
+        self._customer_id = customer_id
+        self._name = name
+        self._email = email
+        self._phone_number = phone_number
+        self._payment_details = payment_details
+
+    # Getters and Setters of attributes
+    def get_customer_id(self):
+        return self._customer_id
+
+    def set_customer_id(self, customer_id):
+        self._customer_id = customer_id
+
+    def get_name(self):
+        return self._name
+
+    def set_name(self, name):
+        self._name = name
+
+    def get_email(self):
+        return self._email
+
+    def set_email(self, email):
+        self._email = email
+
+    def get_phone_number(self):
+        return self._phone_number
+
+    def set_phone_number(self, phone_number):
+        self._phone_number = phone_number
+
+    def get_payment_details(self):
+        return self._payment_details
+
+    def set_payment_details(self, payment_details):
+        self._payment_details = payment_details
+
+    def view_reservation(self):
+        pass
+
+    def make_payment(self):
+        pass
+
