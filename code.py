@@ -162,3 +162,51 @@ class Room:
     def check_availability(self):
         pass
 
+
+class Bill:
+    """Class represents a bill for a reservation in the system"""
+
+    def __init__(self, bill_id, reservation_id, total_amount, taxes):
+        """Constructor will initialize a Bill object."""
+        self._bill_id = bill_id
+        self._reservation_id = reservation_id
+        self._total_amount = total_amount
+        self._taxes = taxes
+        self._payment_status = "unpaid"
+
+    # Getters and Setters of the private members
+    def get_bill_id(self):
+        return self._bill_id
+
+    def set_bill_id(self, bill_id):
+        self._bill_id = bill_id
+
+    def get_reservation_id(self):
+        return self._reservation_id
+
+    def set_reservation_id(self, reservation_id):
+        self._reservation_id = reservation_id
+
+    def get_total_amount(self):
+        return self._total_amount
+
+    def set_total_amount(self, total_amount):
+        self._total_amount = total_amount
+
+    def get_taxes(self):
+        return self._taxes
+
+    def set_taxes(self, taxes):
+        self._taxes = taxes
+
+    def get_payment_status(self):
+        return self._payment_status
+
+    def set_payment_status(self, payment_status):
+        self._payment_status = payment_status
+
+    def generate_bill(self):
+        pass
+
+    def make_payment(self):
+        pass
